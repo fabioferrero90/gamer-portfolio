@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Wild Breath';
+    src: url('/src/assets/mainmenu/font/The Wild Breath of Zelda.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bond-BoldItalic';
+    src: url('/src/assets/mainmenu/font/Bond-BoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Montserrat';
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+    color: #e4d3ad;
+}
+
+.wildtext {
+    font-family: 'Wild Breath', sans-serif;
+}

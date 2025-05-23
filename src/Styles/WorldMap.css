@@ -1,0 +1,41 @@
+.world-map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background: #1a1a1a;
+  min-height: 100vh;
+}
+
+.map-section {
+  position: relative;
+  border-radius: 15px;
+  background: var(--section-color);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.map-section:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--section-color);
+  cursor: pointer;
+}
+
+.section-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Stili specifici per ogni sezione */
+.forest { background-image: url('/path-to-forest-image.jpg'); }
+.mountain { background-image: url('/path-to-mountain-image.jpg'); }
+.crystal { background-image: url('/path-to-crystal-image.jpg'); }
+.desert { background-image: url('/path-to-desert-image.jpg'); }
+.castle { background-image: url('/path-to-castle-image.jpg'); }
