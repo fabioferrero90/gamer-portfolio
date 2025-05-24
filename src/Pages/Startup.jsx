@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
+import music from 'Assets/startup/psx.mp3'
 import '../Styles/Startup.scss'
 
 const Startup = () => {
     const navigate = useNavigate();
-    const audio = new Audio("src/assets/startup/psx.mp3");
+    const audio = new Audio(music);
 
     useEffect(() => {
         audio.load();
