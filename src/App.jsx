@@ -4,6 +4,7 @@ import { GlobalProvider } from "Contexts/GlobalContext";
 import MainMenu from "Pages/MainMenu"
 import NotFound from "Pages/NotFound"
 import WorldMap from "Pages/WorldMap"
+import Intro from "Pages/Startup"
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       <MemoryRouter initialEntries={['/']}>
         <Routes>
           <Route>
-            <Route path="/" element={<MainMenu />} />
+            <Route path="/" element={<Intro />} />
+            <Route path="/main-menu" element={<MainMenu />} />
             <Route path="/play" element={<WorldMap />} />
             <Route path="*" element={<NotFound />} />
           </Route>

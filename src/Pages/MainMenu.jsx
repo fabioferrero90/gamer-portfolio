@@ -56,8 +56,8 @@ const MainMenu = () => {
                     </nav>
                     <div className="m-menu-credits text-xl shadow-xl text-white">
                         <div>
-                            <span>© 2025 made in React by </span>
-                            <p className="text-3xl xl:text-4xl wildtext">Fabio Ferrero</p>
+                            <span className="block">© 2025 made in React by </span>
+                            <span className="text-3xl xl:text-4xl wildtext">Fabio Ferrero</span>
                         </div>
                     </div>
                 </div>
