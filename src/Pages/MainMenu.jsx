@@ -36,11 +36,11 @@ const MainMenu = () => {
     })
 
     return (
-        <div className="m-menu-fullscreen select-none" style={mMenuBg}>
+        <div className="m-menu-fullscreen overflow-hidden select-none" style={mMenuBg}>
             <div className="flex justify-between" style={mMenuGradient}>
                 <div className="m-menu-sidebar outofscreenl py-8 xl:py-20 h-[100vh] flex flex-col justify-between w-1/2 pl-10 md:pl-24">
-                    <div className="game-logo md:pt-5 xl:pt-12 max-h-[40%]">
-                        <img src={mainLogo} alt="Fabio logo" />
+                    <div className="game-logo md:pt-5 xl:pt-12 max-w-[40vw] xl:max-w-[20vw]">
+                        <img className="aspect-square h-full" src={mainLogo} alt="Fabio logo" />
                     </div>
                     <nav className="navmenu py-5 xl:pt-18 text-4xl xl:text-6xl h-full">
                         <ul>
