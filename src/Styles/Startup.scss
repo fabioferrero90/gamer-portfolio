@@ -8,7 +8,7 @@
     body {
         margin: 0;
         width: 100vw;
-        height: 100vh;
+        height: 100dvh;
         font-family: Arial, Helvetica, sans-serif;
     }
 
@@ -99,7 +99,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: 100dvh;
     }
 
     .button {
@@ -237,7 +237,7 @@
         left: -5px;
         top: -5px;
         width: calc(100vw + 10px);
-        height: calc(100vh + 10px);
+        height: calc(100dvh + 10px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -445,7 +445,7 @@
     .startup {
         position: relative;
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -68,7 +68,7 @@ const Startup = () => {
 
     return (
         <div className="psxBoot">
-            <div className="w-[100vw] h-[100vh] flex flex-col justify-center items-center text-5xl text-black">
+            <div className="w-[100vw] h-[100dvh] flex flex-col justify-center items-center text-5xl text-black">
                 <div className="playBtn flex flex-col justify-center items-center relative">
                     <span className="text-white text-[2rem] mb-100 z-90 flex justify-center gap-3"><FaVolumeHigh />SOUNDS ON</span>
                     <button className="bg-gray-300 h-80 w-80 rounded-full z-999 absolute cursor-pointer font-bold animate-pulse shadow-gray-800 shadow-lg"

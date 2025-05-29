@@ -32,7 +32,7 @@ const NotFound = () => {
     const navigate = useNavigate()
 
     return (
-        <main className="h-[100vh] select-none">
+        <main className="h-[100dvh] select-none">
             <div className="death-background h-full flex flex-col justify-center items-center">
                 <div className="flex flex-col justify-end">
                     <p className="text-red-500 text-9xl pb-12 text-center">{t('You Died')}</p>
