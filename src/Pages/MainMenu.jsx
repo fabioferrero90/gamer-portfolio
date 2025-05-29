@@ -36,66 +36,64 @@ const MainMenu = () => {
     })
 
     return (
-        <div className="page-container">
-            <div className="m-menu-fullscreen w-[100vw] h-[100vh] overflow-hidden select-none" style={mMenuBg}>
-                <div className="flex justify-between" style={mMenuGradient}>
-                    <div className="m-menu-sidebar outofscreenl py-8 xl:py-20 h-[100vh] flex flex-col justify-between w-1/2 pl-10 md:pl-24">
-                        <div className="game-logo md:pt-5 xl:pt-12 max-h-[40%]">
-                            <img className="h-full" src={mainLogo} alt="" />
-                        </div>
-                        <nav className="navmenu py-5 xl:pt-18 text-4xl xl:text-6xl h-full">
-                            <ul>
-                                <li className="disabled">
-                                    <a
-                                        className="opacity-50"
-                                        onClick={() => selSound.play()}
-                                    >Continue</a>
-                                </li>
-                                <li>
-                                    <a
-                                        className="cursor-pointer hover:text-yellow-50"
-                                        onClick={() => {
-                                            selSound.play();
-                                            navigate("/play")
-                                        }}
-                                    >New Game</a>
-                                </li>
-                                <li>
-                                    <a
-                                        className="cursor-pointer hover:text-yellow-50"
-                                        onClick={() => selSound.play()}
-                                    >Achievements</a>
-                                </li>
-                                <li>
-                                    <a
-                                        className="cursor-pointer hover:text-yellow-50"
-                                        href="https://github.com/fabioferrero90"
-                                        target="_blank" rel="noopener noreferrer"
-                                        onClick={() => selSound.play()}
-                                    >GitHub</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div className="m-menu-credits text-xl text-white">
-                            <div>
-                                <span className="text-xs md:text-xl block">© 2025 made in React by </span>
-                                <span className="md:text-3xl xl:text-4xl wildtext">Fabio Ferrero</span>
-                            </div>
+        <div className="m-menu-fullscreen w-[100vw] h-[100vh] overflow-hidden select-none" style={mMenuBg}>
+            <div className="flex justify-between" style={mMenuGradient}>
+                <div className="m-menu-sidebar outofscreenl py-8 xl:py-20 h-[100vh] flex flex-col justify-between w-1/2 pl-10 md:pl-24">
+                    <div className="game-logo md:pt-5 xl:pt-12 max-h-[40%]">
+                        <img className="h-full" src={mainLogo} alt="" />
+                    </div>
+                    <nav className="navmenu py-5 xl:pt-18 text-4xl xl:text-6xl h-full">
+                        <ul>
+                            <li className="disabled">
+                                <a
+                                    className="opacity-50"
+                                    onClick={() => selSound.play()}
+                                >Continue</a>
+                            </li>
+                            <li>
+                                <a
+                                    className="cursor-pointer hover:text-yellow-50"
+                                    onClick={() => {
+                                        selSound.play();
+                                        navigate("/play")
+                                    }}
+                                >New Game</a>
+                            </li>
+                            <li>
+                                <a
+                                    className="cursor-pointer hover:text-yellow-50"
+                                    onClick={() => selSound.play()}
+                                >Achievements</a>
+                            </li>
+                            <li>
+                                <a
+                                    className="cursor-pointer hover:text-yellow-50"
+                                    href="https://github.com/fabioferrero90"
+                                    target="_blank" rel="noopener noreferrer"
+                                    onClick={() => selSound.play()}
+                                >GitHub</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div className="m-menu-credits text-xl text-white">
+                        <div>
+                            <span className="text-xs md:text-xl block">© 2025 made in React by </span>
+                            <span className="md:text-3xl xl:text-4xl wildtext">Fabio Ferrero</span>
                         </div>
                     </div>
-                    <div className="flex rightmodal outofscreenr flex-col justify-center items-end bg-black/70 p-8 md:p-6 rounded-l-2xl absolute right-0 bottom-[12vh]">
-                        <div className="max-w-[100%]">
-                            <div className="text-xl md:text-2xl text-white text-center">Don't want to play?</div>
-                            <button
-                                className="bg-gray-600 text-2xl text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors cursor-pointer"
-                                onClick={() => {
-                                    selSound.play();
-                                    navigate("/boomer")
-                                }}
-                            >
-                                Enable Boomer Mode
-                            </button>
-                        </div>
+                </div>
+                <div className="flex rightmodal outofscreenr flex-col justify-center items-end bg-black/70 p-8 md:p-6 rounded-l-2xl absolute right-0 bottom-[12vh]">
+                    <div className="max-w-[100%]">
+                        <div className="text-xl md:text-2xl text-white text-center">Don't want to play?</div>
+                        <button
+                            className="bg-gray-600 text-2xl text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors cursor-pointer"
+                            onClick={() => {
+                                selSound.play();
+                                navigate("/boomer")
+                            }}
+                        >
+                            Enable Boomer Mode
+                        </button>
                     </div>
                 </div>
             </div>
