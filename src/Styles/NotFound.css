@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OptimusPrinceps';
-    src: url('/src/assets/notfound/font/OptimusPrinceps.ttf') format('TrueType');
+    src: url('Assets/notfound/font/OptimusPrinceps.ttf') format('TrueType');
 }
 
 .body,

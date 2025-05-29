@@ -18,12 +18,5 @@ export default defineConfig({
       'Styles': '/src/Styles',
       'Assets': '/src/assets'
     },
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        assetFileNames: 'assets/[name]-[hash][extname]',
-      },
-    },
   }
 })

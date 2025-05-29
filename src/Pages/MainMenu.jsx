@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from '/src/assets/mainmenu/backgrounds/mainBG.png';
+import backgroundImage from 'Assets/mainmenu/backgrounds/mainBG.png';
+import mainLogo from 'Assets/mainmenu/fabio_logo.png';
+import selectSound from 'Assets/mainmenu/sounds/select.mp3'; 
+
 import 'Styles/MainMenu.css';
 
-const selectSound = new Audio("/src/assets/mainmenu/sounds/select.mp3");
-selectSound.volume = 0.1;
+const selSound = new Audio(selectSound);
+selSound.volume = 0.1;
 
 const MainMenu = () => {
     const navigate = useNavigate();
@@ -38,21 +41,21 @@ const MainMenu = () => {
                 <div className="flex justify-between" style={mMenuGradient}>
                     <div className="m-menu-sidebar outofscreenl py-8 xl:py-20 h-[100vh] flex flex-col justify-between w-1/2 pl-10 md:pl-24">
                         <div className="game-logo md:pt-5 xl:pt-12 max-h-[40%]">
-                            <img className="h-full" src="/src/assets/mainmenu/fabio_logo.png" alt="" />
+                            <img className="h-full" src={mainLogo} alt="" />
                         </div>
                         <nav className="navmenu py-5 xl:pt-18 text-4xl xl:text-6xl h-full">
                             <ul>
                                 <li className="disabled">
                                     <a
                                         className="opacity-50"
-                                        onClick={() => selectSound.play()}
+                                        onClick={() => selSound.play()}
                                     >Continue</a>
                                 </li>
                                 <li>
                                     <a
                                         className="cursor-pointer hover:text-yellow-50"
                                         onClick={() => {
-                                            selectSound.play();
+                                            selSound.play();
                                             navigate("/play")
                                         }}
                                     >New Game</a>
@@ -60,7 +63,7 @@ const MainMenu = () => {
                                 <li>
                                     <a
                                         className="cursor-pointer hover:text-yellow-50"
-                                        onClick={() => selectSound.play()}
+                                        onClick={() => selSound.play()}
                                     >Achievements</a>
                                 </li>
                                 <li>
@@ -68,7 +71,7 @@ const MainMenu = () => {
                                         className="cursor-pointer hover:text-yellow-50"
                                         href="https://github.com/fabioferrero90"
                                         target="_blank" rel="noopener noreferrer"
-                                        onClick={() => selectSound.play()}
+                                        onClick={() => selSound.play()}
                                     >GitHub</a>
                                 </li>
                             </ul>
@@ -86,7 +89,7 @@ const MainMenu = () => {
                             <button
                                 className="bg-gray-600 text-2xl text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors cursor-pointer"
                                 onClick={() => {
-                                    selectSound.play();
+                                    selSound.play();
                                     navigate("/boomer")
                                 }}
                             >
