@@ -19,7 +19,7 @@ body {
 
 .m-menu-fullscreen {
     background-image: url('/mainmenu/backgrounds/mainBG.png');
-    width:100dvh;
+    width:100dvw;
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
