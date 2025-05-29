@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
-import '../Styles/Startup.scss'
+import 'Styles/Startup.scss'
+import { FaVolumeHigh } from "react-icons/fa6";
 
 const Startup = () => {
     const navigate = useNavigate();
+    const push = new Audio("/src/assets/startup/button.mp3");
     const audio = new Audio("/src/assets/startup/psx.mp3");
 
     useEffect(() => {
+        push.load();
+        push.volume = 0.1;
         audio.load();
-        audio.volume = 0.4;
+        audio.volume = 0.05;
     }, []);
 
     const startUp = () => {
@@ -27,7 +31,7 @@ const Startup = () => {
             ['.stageTwoLicense', 'stageTwoLicenseAnim'],
             ['.playBtn', 'hide']
         ];
-
+       
         elements.forEach(([selector, className]) => {
             const element = document.querySelector(selector);
             if (element) {
@@ -35,6 +39,7 @@ const Startup = () => {
             }
         });
 
+        push.play();
         setTimeout(() => {
             audio.play();
         }, 500);
@@ -60,12 +65,17 @@ const Startup = () => {
 
 
     return (
-        <>
+        <div className="psxBoot">
             <div className="w-[100vw] h-[100vh] flex flex-col justify-center items-center text-5xl text-black">
-                <button className="playBtn h-80 w-80 rounded-full z-999 absolute cursor-pointer font-bold animate-pulse shadow-gray-800 shadow-lg"
-                    onClick={(e) => handlePlay(e)}
-                >POWER</button>
-                <span className="skip text-xl font-bold self-end-safe right-10 bottom-10 text-white absolute text-4xl z-999 hover:text-amber-100 cursor-pointer"
+                <div className="playBtn flex flex-col justify-center items-center relative">
+                    <span className="text-white text-[2rem] mb-100 z-90 flex justify-center gap-3"><FaVolumeHigh />SOUNDS ON</span>
+                    <button className="bg-gray-300 h-80 w-80 rounded-full z-999 absolute cursor-pointer font-bold animate-pulse shadow-gray-800 shadow-lg"
+                        onClick={(e) => handlePlay(e)}
+                    >
+                        POWER
+                    </button>
+                </div>
+                <span className="skip text-2xl font-bold self-end-safe right-10 bottom-10 text-white absolute z-999 hover:text-amber-100 cursor-pointer"
                     onClick={() => handleSkip()}>
                     SKIP INTRO
                 </span>
@@ -100,10 +110,10 @@ const Startup = () => {
                         </div>
                     </div>
                     <h2 className="stageOneFrontend pt-12 pl-2">FRONTEND</h2>
-                    <h2 className="stageOneEntertainment pt-12">ENTERTAINMENT <span className="tm">tm</span></h2>
+                    <h2 className="stageOneEntertainment pt-12">ENTERTAINMENT</h2>
                 </div>
             </div >
-        </>
+        </div>
     )
 }
 

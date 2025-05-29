@@ -21,3 +21,34 @@ body {
 .wildtext {
     font-family: 'Wild Breath', sans-serif;
 }
+
+.navmenu li:not(.disabled) a:hover::after {
+    content: url('/src/assets/mainmenu/selector.svg');
+    position: relative;
+    left: 20px;
+    width: 50px;
+    display: inline-block;
+    line-height: 40px;
+    transform: rotate(180deg) translateY(20%);
+    filter: sepia(12%) saturate(346%) hue-rotate(357deg) brightness(98%) contrast(90%);
+}
+
+.m-menu-sidebar,
+.rightmodal {
+    transition: all 0.3s ease-in-out;
+}
+
+.rightmodal.outofscreenr {
+    transform: translateX(150%);
+}
+
+.m-menu-sidebar.outofscreenl {
+    transform: translateX(-150%);
+}
+
+
+@media (max-width: 768px) {
+    .m-menu-fullscreen {
+        background-position: bottom right -350px !important;
+    }
+}
