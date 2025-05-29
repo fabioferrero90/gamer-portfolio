@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import backgroundImage from '/mainmenu/backgrounds/mainBG.png';
 import mainLogo from '/mainmenu/fabio_logo.png';
 import selectSound from '/mainmenu/sounds/select.mp3'; 
+import { useGlobalContext } from 'Contexts/GlobalContext';
+import i18next from 'i18next';
 
 import 'Styles/MainMenu.css';
 
@@ -10,6 +12,33 @@ const selSound = new Audio(selectSound);
 selSound.volume = 0.1;
 
 const MainMenu = () => {
+
+    const { lang } = useGlobalContext()
+    const { t } = i18next
+    i18next.init({
+        lng: lang,
+        resources: {
+            en: {
+                translation: {
+                    "Continue": "Continue",
+                    "New Game": "New Game",
+                    "Achievements": "Achievements",
+                    "Enable Boomer Mode": "Enter Boomer Mode",
+                    "Don't want to play?": "Don't want to play?",
+                }
+            },
+            it: {
+                translation: {
+                    "Continue": "Continua",
+                    "New Game": "Nuova Partita",
+                    "Achievements": "Obiettivi",
+                    "Enable Boomer Mode": "Entra in Modalità Boomer",
+                    "Don't want to play?": "Non vuoi giocare?",
+                }
+            }
+        }
+    })
+
     const navigate = useNavigate();
 
     const mMenuBg = {
@@ -48,7 +77,7 @@ const MainMenu = () => {
                                 <a
                                     className="opacity-50"
                                     onClick={() => selSound.play()}
-                                >Continue</a>
+                                >{t("Continue")}</a>
                             </li>
                             <li>
                                 <a
@@ -57,13 +86,13 @@ const MainMenu = () => {
                                         selSound.play();
                                         navigate("/play")
                                     }}
-                                >New Game</a>
+                                >{t("New Game")}</a>
                             </li>
                             <li>
                                 <a
                                     className="cursor-pointer hover:text-yellow-50"
                                     onClick={() => selSound.play()}
-                                >Achievements</a>
+                                >{t("Achievements")}</a>
                             </li>
                             <li>
                                 <a
@@ -83,16 +112,16 @@ const MainMenu = () => {
                     </div>
                 </div>
                 <div className="flex rightmodal outofscreenr flex-col justify-center items-end bg-black/70 p-8 md:p-6 rounded-l-2xl absolute right-0 bottom-[12vh]">
-                    <div className="max-w-[100%]">
-                        <div className="text-xl md:text-2xl text-white text-center">Don't want to play?</div>
+                    <div className="boomerBtn max-w-[100%]">
+                        <div className="text-lg font-bold pb-4 text-white text-center">{t("Don't want to play?")}</div>
                         <button
-                            className="bg-gray-600 text-2xl text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors cursor-pointer"
+                            className=" bg-gray-600 text-md font-bold text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors cursor-pointer"
                             onClick={() => {
                                 selSound.play();
                                 navigate("/boomer")
                             }}
                         >
-                            Enable Boomer Mode
+                            {t("Enable Boomer Mode")}
                         </button>
                     </div>
                 </div>

@@ -13,7 +13,6 @@
 }
 
 body {
-    font-family: 'Montserrat';
     text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
     color: #e4d3ad;
 }
@@ -40,6 +39,10 @@ body {
 
 .rightmodal.outofscreenr {
     transform: translateX(150%);
+}
+
+.boomerBtn {
+    font-family:'Montserrat', sans-serif;
 }
 
 .m-menu-sidebar.outofscreenl {
