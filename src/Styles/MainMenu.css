@@ -52,6 +52,6 @@ body {
 
 @media (max-width: 768px) {
     .m-menu-fullscreen {
-        background-position: bottom right -350px !important;
+        background-position: bottom right -310px !important;
     }
 }

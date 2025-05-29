@@ -4,7 +4,6 @@ import LangSelector from '../Components/LangSelector'
 const DefaultLayout = () => {
   return (
     <div>
-      <LangSelector />
       <main><Outlet /></main>      
     </div>
   )

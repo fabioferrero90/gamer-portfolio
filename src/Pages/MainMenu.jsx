@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import backgroundImage from '/mainmenu/backgrounds/mainBG.png';
 import mainLogo from '/mainmenu/fabio_logo.png';
 import selectSound from '/mainmenu/sounds/select.mp3'; 
+import LangSelector from 'Components/LangSelector';
 import { useGlobalContext } from 'Contexts/GlobalContext';
 import i18next from 'i18next';
 
@@ -66,6 +67,7 @@ const MainMenu = () => {
 
     return (
         <div className="m-menu-fullscreen overflow-hidden select-none" style={mMenuBg}>
+            <LangSelector />
             <div className="flex justify-between" style={mMenuGradient}>
                 <div className="m-menu-sidebar outofscreenl py-8 xl:py-20 h-[100vh] flex flex-col justify-between w-1/2 pl-10 md:pl-24">
                     <div className="game-logo md:pt-5 xl:pt-12 max-w-[40vw] xl:max-w-[20vw]">
@@ -111,9 +113,9 @@ const MainMenu = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex rightmodal outofscreenr flex-col justify-center items-end bg-black/70 p-8 md:p-6 rounded-l-2xl absolute right-0 bottom-[12vh]">
+                <div className="flex rightmodal outofscreenr flex-col justify-center items-end bg-black/70 p-5 rounded-l-2xl absolute right-0 bottom-[10%]">
                     <div className="boomerBtn max-w-[100%]">
-                        <div className="text-lg font-bold pb-4 text-white text-center">{t("Don't want to play?")}</div>
+                        <div className="text-lg font-bold pb-2 text-white text-center">{t("Don't want to play?")}</div>
                         <button
                             className=" bg-gray-600 text-md font-bold text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors cursor-pointer"
                             onClick={() => {

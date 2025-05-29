@@ -9,7 +9,7 @@ span {
 }
 
 .death-background {
-    transform:scale(1.5);
+    transform:scale(1.2);
     background: black;
     animation: fade-in 5s linear;
 
