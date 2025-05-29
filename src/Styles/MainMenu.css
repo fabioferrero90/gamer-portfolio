@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Wild Breath';
-    src: url('Assets/mainmenu/font/The Wild Breath of Zelda.otf') format('opentype');
+    src: url('/mainmenu/font/The Wild Breath of Zelda.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Bond-BoldItalic';
-    src: url('Assets/mainmenu/font/Bond-BoldItalic.otf') format('opentype');
+    src: url('/mainmenu/font/Bond-BoldItalic.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,7 +23,7 @@ body {
 }
 
 .navmenu li:not(.disabled) a:hover::after {
-    content: url('Assets/mainmenu/selector.svg');
+    content: url('/mainmenu/selector.svg');
     position: relative;
     left: 20px;
     width: 50px;

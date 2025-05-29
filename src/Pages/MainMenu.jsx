@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from 'Assets/mainmenu/backgrounds/mainBG.png';
-import mainLogo from 'Assets/mainmenu/fabio_logo.png';
-import selectSound from 'Assets/mainmenu/sounds/select.mp3'; 
+import backgroundImage from '/mainmenu/backgrounds/mainBG.png';
+import mainLogo from '/mainmenu/fabio_logo.png';
+import selectSound from '/mainmenu/sounds/select.mp3'; 
 
 import 'Styles/MainMenu.css';
 

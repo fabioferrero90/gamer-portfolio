@@ -16,7 +16,6 @@ export default defineConfig({
       'Data': '/src/Data',
       'Components': '/src/Components',
       'Styles': '/src/Styles',
-      'Assets': '/src/assets'
     },
   }
 })

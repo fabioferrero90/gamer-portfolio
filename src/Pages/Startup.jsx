@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import 'Styles/Startup.scss'
 import { FaVolumeHigh } from "react-icons/fa6";
-import pushAudio from 'Assets/startup/button.mp3';
-import audioFile from 'Assets/startup/psx.mp3';
+import pushAudio from '/startup/button.mp3';
+import audioFile from '/startup/psx.mp3';
 
 const Startup = () => {
     const navigate = useNavigate();
