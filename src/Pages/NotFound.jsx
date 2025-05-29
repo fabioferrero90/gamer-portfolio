@@ -12,7 +12,7 @@ const NotFound = () => {
                     <p className="text-red-500 text-9xl pb-12 text-center">You Died</p>
                 </div>
                 <span className="text-lg text-white">
-                    Or just clicked the wrong button.
+                    Or maybe this part is not complete.
                 </span>
                 <button
                     className="bg-yellow-100 text-black font-bold p-3 rounded-2xl mt-4 cursor-pointer"
