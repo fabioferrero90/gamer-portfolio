@@ -4,6 +4,7 @@ import 'Styles/Startup.scss'
 import { FaVolumeHigh } from "react-icons/fa6";
 import pushAudio from '/startup/button.mp3';
 import audioFile from '/startup/psx.mp3';
+import powerOn from '/startup/power_on.svg';
 
 const Startup = () => {
     const navigate = useNavigate();
@@ -71,13 +72,13 @@ const Startup = () => {
             <div className="w-[100vw] h-[100dvh] flex flex-col justify-center items-center text-5xl text-black">
                 <div className="playBtn flex flex-col justify-center items-center relative">
                     <span className="text-white text-[2rem] mb-100 z-90 flex justify-center gap-3"><FaVolumeHigh />SOUNDS ON</span>
-                    <button className="bg-gray-300 h-80 w-80 rounded-full z-999 absolute cursor-pointer font-bold animate-pulse shadow-gray-800 shadow-lg"
+                    <button className="bg-gray-300 h-80 w-80 rounded-full z-999 absolute cursor-pointer font-bold shadow-gray-800 shadow-lg"
                         onClick={(e) => handlePlay(e)}
                     >
-                        POWER
+                        <img src={powerOn} alt="powerOn" width="50%" className="translate-x-1"/>
                     </button>
                 </div>
-                <span className="skip text-2xl font-bold self-end-safe right-10 bottom-10 text-white absolute z-999 hover:text-amber-100 cursor-pointer"
+                <span className="skip text-2xl font-bold md:right-10 bottom-10 text-white absolute z-999 hover:text-amber-100 cursor-pointer"
                     onClick={() => handleSkip()}>
                     SKIP INTRO
                 </span>

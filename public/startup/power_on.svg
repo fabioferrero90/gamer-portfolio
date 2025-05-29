@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_1" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 173.35 88.12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Sfumatura_senza_nome_89);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #9d9d9c;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+
+      .cls-2 {
+        fill: url(#Sfumatura_senza_nome_89-3);
+      }
+
+      .cls-3 {
+        fill: url(#Sfumatura_senza_nome_89-2);
+      }
+
+      .cls-4 {
+        fill: url(#Sfumatura_senza_nome_89-4);
+      }
+    </style>
+    <linearGradient id="Sfumatura_senza_nome_89" data-name="Sfumatura senza nome 89" x1=".12" y1="44.06" x2="11.95" y2="44.06" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5fbeb0"/>
+      <stop offset=".22" stop-color="#76c2a0"/>
+      <stop offset=".47" stop-color="#88c693"/>
+      <stop offset=".73" stop-color="#94c98b"/>
+      <stop offset="1" stop-color="#98ca89"/>
+    </linearGradient>
+    <linearGradient id="Sfumatura_senza_nome_89-2" data-name="Sfumatura senza nome 89" x1="32.93" x2="80.95" gradientTransform="translate(-13.64 29.83) rotate(-26.34)" xlink:href="#Sfumatura_senza_nome_89"/>
+    <linearGradient id="Sfumatura_senza_nome_89-3" data-name="Sfumatura senza nome 89" x1="127.95" y1="24.03" x2="138.36" y2="24.03" xlink:href="#Sfumatura_senza_nome_89"/>
+    <linearGradient id="Sfumatura_senza_nome_89-4" data-name="Sfumatura senza nome 89" x1="93.09" y1="49.58" x2="217" y2="49.58" xlink:href="#Sfumatura_senza_nome_89"/>
+  </defs>
+  <rect class="cls-1" x=".12" y="4.27" width="11.82" height="79.57"/>
+  <rect class="cls-3" x="51.1" y="1.74" width="11.68" height="84.65" transform="translate(25.46 -20.69) rotate(26.34)"/>
+  <g>
+    <rect class="cls-2" x="127.95" y=".12" width="10.41" height="47.8"/>
+    <path class="cls-4" d="M149.1,11.17v12.76c7.76,5.16,12.88,13.98,12.88,24,0,15.92-12.9,28.82-28.82,28.82s-28.82-12.9-28.82-28.82c0-9.79,4.89-18.43,12.36-23.64v-12.87c-13.91,6.28-23.61,20.25-23.61,36.51,0,22.13,17.94,40.07,40.07,40.07s40.07-17.94,40.07-40.07c0-16.46-9.94-30.59-24.13-36.76Z"/>
+  </g>
+</svg>
