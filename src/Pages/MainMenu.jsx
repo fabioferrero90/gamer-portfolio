@@ -36,7 +36,7 @@ const MainMenu = () => {
     })
 
     return (
-        <div className="m-menu-fullscreen w-[100vw] h-[100vh] overflow-hidden select-none" style={mMenuBg}>
+        <div className="m-menu-fullscreen select-none" style={mMenuBg}>
             <div className="flex justify-between" style={mMenuGradient}>
                 <div className="m-menu-sidebar outofscreenl py-8 xl:py-20 h-[100vh] flex flex-col justify-between w-1/2 pl-10 md:pl-24">
                     <div className="game-logo md:pt-5 xl:pt-12 max-h-[40%]">

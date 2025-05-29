@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom'
 
 const DefaultLayout = () => {
   return (
-    <div className="page-container">
+    <div>
       <main><Outlet /></main>      
     </div>
   )
