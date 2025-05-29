@@ -17,6 +17,22 @@ body {
     color: #e4d3ad;
 }
 
+.m-menu-fullscreen {
+    background-image: url('/mainmenu/backgrounds/mainBG.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-position 0.2s ease-out;
+    font-family: 'Wild Breath', sans-serif;
+}
+
+.m-menu-gradient {
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.0));
+    background-size: cover;
+    background-position: center;
+}
+
 .wildtext {
     font-family: 'Wild Breath', sans-serif;
 }
@@ -38,11 +54,11 @@ body {
 }
 
 .rightmodal.outofscreenr {
-    transform: translateX(150%);
+    transform: translateX(100%);
 }
 
 .boomerBtn {
-    font-family:'Montserrat', sans-serif;
+    font-family: sans-serif;
 }
 
 .m-menu-sidebar.outofscreenl {
