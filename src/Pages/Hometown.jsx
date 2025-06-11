@@ -38,11 +38,11 @@ const Hometown = () => {
       static height = 32;
       constructor({ position }) {
         this.position = position;
-        this.width = 32;
-        this.height = 32;
+        this.width = 27;
+        this.height = 27;
       }
       draw() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0)';
+        ctx.fillStyle = 'rgba(255, 0, 0, 0)';
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
       }
     }
@@ -54,16 +54,22 @@ const Hometown = () => {
     const canvas = canvasRef.current;
     canvas.width = 1024;
     canvas.height = 776;
+    canvas.style.background = 'black';
+    canvas.style.imageRendering = 'pixelated';
+    canvas.style.mozImageRendering = 'pixelated';
+    canvas.style.webkitImageRendering = 'pixelated';
+    
+
     const ctx = canvas.getContext('2d');
 
     const collisionsMap = [];
-    for (let i = 0; i < collisions.length; i += 50) {
-      collisionsMap.push(collisions.slice(i, 50 + i))
+    for (let i = 0; i < collisions.length; i += 100) {
+      collisionsMap.push(collisions.slice(i, 100 + i))
     }
 
     const offset = {
-      x: -370,
-      y: 30
+      x: -1298,
+      y: -690
     }
 
     const boundaries = [];
@@ -282,8 +288,8 @@ const Hometown = () => {
   }, []);
 
   return (
-    <div className="image-rendering-pixelated h-screen w-screen overflow-hidden">
-      <canvas ref={canvasRef}></canvas>
+    <div className="flex justify-center items-center h-screen w-screen overflow-hidden">
+      <canvas className="w-full" ref={canvasRef}></canvas>
     </div>
   )
 }
