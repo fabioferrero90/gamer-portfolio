@@ -14,10 +14,10 @@ const App = () => {
       <MemoryRouter initialEntries={['/']}>
         <Routes>
           <Route element={<DefaultLayout />}>
-            {/* <Route path="/" element={<Intro />} /> */}
+            <Route path="/" element={<Intro />} />
             <Route path="/main-menu" element={<MainMenu />} />
             <Route path="/play" element={<WorldMap />} />
-            <Route path="/" element={<Hometown />} />
+            <Route path="/hometown" element={<Hometown />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
