@@ -1,0 +1,77 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Hometown.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "exportAsImage.useCurrentScale": true,
+    "fileStates": {
+        "Hometown.tmx": {
+            "expandedGroupLayers": [
+                9
+            ],
+            "scale": 0.75,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 1818.6666666666665,
+                "y": 742.6666666666665
+            }
+        },
+        "Hometown.tmx#collision": {
+            "scaleInDock": 2
+        },
+        "Modern_Exteriors_Complete_Tileset_32x32.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 0.5
+        },
+        "Senza Titolo.tmx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 792.5,
+                "y": 701
+            }
+        },
+        "Senza Titolo.tmx#collision": {
+            "scaleInEditor": 1
+        },
+        "collision.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "forest.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "sunnysideworld.tsx": {
+            "scaleInDock": 3,
+            "scaleInEditor": 1.5
+        }
+    },
+    "last.exportedFilePath": "C:/Users/Fabio/Documents/Github/gamer-portfolio/TiledAssets",
+    "last.externalTilesetPath": "C:/Users/Fabio/Documents/Github/gamer-portfolio/TiledAssets",
+    "last.imagePath": "C:/Users/Fabio/Documents/Github/gamer-portfolio/TiledAssets",
+    "map.height": 40,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 50,
+    "openFiles": [
+        "Hometown.tmx",
+        "Modern_Exteriors_Complete_Tileset_32x32.tsx"
+    ],
+    "project": "",
+    "recentFiles": [
+        "Modern_Exteriors_Complete_Tileset_32x32.tsx",
+        "Hometown.tmx",
+        "collision.tsx"
+    ],
+    "tileset.lastUsedFilter": "File Tileset Tiled (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 32,
+        "width": 32
+    }
+}

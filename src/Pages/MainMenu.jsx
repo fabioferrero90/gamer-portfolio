@@ -76,7 +76,7 @@ const MainMenu = () => {
                                     className="cursor-pointer hover:text-yellow-50"
                                     onClick={() => {
                                         selSound.play();
-                                        navigate("/play")
+                                        navigate("/hometown")
                                     }}
                                 >{t("New Game")}</a>
                             </li>
