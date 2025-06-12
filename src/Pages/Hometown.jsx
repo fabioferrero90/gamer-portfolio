@@ -160,9 +160,6 @@ const Hometown = () => {
       player.draw();
       foregroundMap.draw();
 
-
-
-
       if (keys.w.pressed && lastKey === "w") {
         for (let i = 0; i < boundaries.length; i++) {
           const boundary = boundaries[i];
