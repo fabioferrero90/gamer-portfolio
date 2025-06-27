@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { useOnMountUnsafe } from 'Hooks/useOnMountUnsafe';
 import collisions from 'Assets/game-assets/hometown/collisions.js';
+import Dialogs from 'Components/Game/Dialogs.jsx';
 
 const Hometown = () => {
   const canvasRef = useRef(null);
@@ -9,19 +10,21 @@ const Hometown = () => {
 
     // CLASSES DECLARATION 
     class Sprite {
-      constructor({ position, velocity, image, frames = { max: 1 } }) {
+      constructor({ position, velocity, image, frames = { max: 1 }, sprites }) {
         this.position = position
         this.image = image
-        this.frames = frames
+        this.frames = { ...frames, val: 0, elapsed: 0 }
         this.image.onload = () => {
           this.width = this.image.width / this.frames.max;
           this.height = this.image.height;
         }
+        this.moving = false;
+        this.sprites = sprites;
       }
       draw() {
         ctx.drawImage(
           this.image,
-          0,
+          this.frames.val * 32,
           0,
           this.image.width / this.frames.max,
           this.image.height,
@@ -30,6 +33,17 @@ const Hometown = () => {
           this.image.width / this.frames.max,
           this.image.height,
         );
+        if (!this.moving) {
+          this.frames.val = 0;
+          return
+        };
+        if (this.frames.max > 1) {
+          this.frames.elapsed++;
+        }
+        if (this.frames.elapsed % 20 === 0) {
+          if (this.frames.val < this.frames.max - 1) this.frames.val++
+          else this.frames.val = 0;
+        }
       }
     }
 
@@ -58,7 +72,7 @@ const Hometown = () => {
     canvas.style.imageRendering = 'pixelated';
     canvas.style.mozImageRendering = 'pixelated';
     canvas.style.webkitImageRendering = 'pixelated';
-    
+
 
     const ctx = canvas.getContext('2d');
 
@@ -90,22 +104,34 @@ const Hometown = () => {
     });
 
     const map = new Image();
-    const hero = new Image();
+    const heroUp = new Image();
+    const heroLeft = new Image();
+    const heroRight = new Image();
+    const heroDown = new Image();
     const foreground = new Image();
     map.src = '/game-assets/hometown/hometown-map.png';
-    hero.src = '/game-assets/hero/HeroDown.png';
+    heroUp.src = '/game-assets/hero/HeroUp.png';
+    heroLeft.src = '/game-assets/hero/HeroLeft.png';
+    heroRight.src = '/game-assets/hero/HeroRight.png';
+    heroDown.src = '/game-assets/hero/HeroDown.png';
     foreground.src = '/game-assets/hometown/hometown-map-foreground.png';
 
 
 
     const player = new Sprite({
       position: {
-        x: canvas.width / 2 - hero.width / 4 / 2,
-        y: canvas.height / 2 - hero.height / 2,
+        x: canvas.width / 2 - heroUp.width / 4 / 2,
+        y: canvas.height / 2 - heroUp.height / 2,
       },
-      image: hero,
+      image: heroDown,
       frames: {
         max: 4
+      },
+      sprites: {
+        up: heroUp,
+        left: heroLeft,
+        down: heroDown,
+        right: heroRight
       }
     })
 
@@ -159,8 +185,11 @@ const Hometown = () => {
       });
       player.draw();
       foregroundMap.draw();
-
+      let moving = true;
+      player.moving = false;
       if (keys.w.pressed && lastKey === "w") {
+        player.moving = true;
+        player.image = player.sprites.up;
         for (let i = 0; i < boundaries.length; i++) {
           const boundary = boundaries[i];
           if (
@@ -181,6 +210,8 @@ const Hometown = () => {
         movables.forEach(movable => movable.position.y += 1)
       }
       else if (keys.s.pressed && lastKey === "s") {
+        player.moving = true;
+        player.image = player.sprites.down;
         for (let i = 0; i < boundaries.length; i++) {
           const boundary = boundaries[i];
           if (
@@ -201,6 +232,8 @@ const Hometown = () => {
         movables.forEach(movable => movable.position.y -= 1)
       }
       else if (keys.a.pressed && lastKey === "a") {
+        player.moving = true;
+        player.image = player.sprites.left;
         for (let i = 0; i < boundaries.length; i++) {
           const boundary = boundaries[i];
           if (
@@ -221,6 +254,8 @@ const Hometown = () => {
         movables.forEach(movable => movable.position.x += 1)
       }
       else if (keys.d.pressed && lastKey === "d") {
+        player.moving = true;
+        player.image = player.sprites.right;
         for (let i = 0; i < boundaries.length; i++) {
           const boundary = boundaries[i];
           if (
@@ -285,9 +320,13 @@ const Hometown = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen w-screen overflow-hidden">
-      <canvas className="w-full" ref={canvasRef}></canvas>
+    <div className="flex justify-center items-center h-screen w-screen overflow-hidden bg-gray-800">
+      <canvas className="h-full" ref={canvasRef}></canvas>
+      <Dialogs 
+      message="Welcome to my HomeTown visitor! here starts your journey to know the Legend of Fabio, a master of Front End Developing, move with WASD and interact with [E]."
+      />
     </div>
+
   )
 }
 

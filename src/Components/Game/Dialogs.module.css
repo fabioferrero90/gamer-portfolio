@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+
+
+p {
+    font-family: 'Micro 5', sans-serif;
+}
+
+.typewriter {
+  font-family: 'Micro 5', sans-serif;
+  /* NIENTE animazione né overflow né width né white-space */
+}
+
+/* .caret {
+  animation: blink-caret .75s step-end infinite;
+  border-right: .15em solid rgb(85, 66, 31);
+} */
+
+.dialogTextScrollable {
+  height: 100%;           /* Occupa tutta l’altezza del contenitore */
+  overflow-y: auto;       /* Scroll verticale */
+  scrollbar-width: thin;  /* Scrollbar sottile su Firefox */
+  /* Per Chrome/Edge puoi aggiungere: */
+  /* 
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  */
+}
