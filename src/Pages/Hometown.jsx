@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useOnMountUnsafe } from 'Hooks/useOnMountUnsafe';
 import collisions from 'Assets/game-assets/hometown/collisions.js';
 import Dialogs from 'Components/Game/Dialogs.jsx';
@@ -10,7 +10,7 @@ const Hometown = () => {
 
     // CLASSES DECLARATION 
     class Sprite {
-      constructor({ position, velocity, image, frames = { max: 1 }, sprites }) {
+      constructor({ position, image, frames = { max: 1 }, sprites }) {
         this.position = position
         this.image = image
         this.frames = { ...frames, val: 0, elapsed: 0 }
@@ -185,7 +185,6 @@ const Hometown = () => {
       });
       player.draw();
       foregroundMap.draw();
-      let moving = true;
       player.moving = false;
       if (keys.w.pressed && lastKey === "w") {
         player.moving = true;

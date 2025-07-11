@@ -13,11 +13,11 @@
             "expandedGroupLayers": [
                 9
             ],
-            "scale": 1,
+            "scale": 1.5,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 1435.5,
-                "y": 1127
+                "x": 920.3333333333333,
+                "y": 401.33333333333337
             }
         },
         "Hometown.tmx#collision": {
@@ -25,7 +25,7 @@
         },
         "Modern_Exteriors_Complete_Tileset_32x32.tsx": {
             "scaleInDock": 1,
-            "scaleInEditor": 1.5
+            "scaleInEditor": 0.5
         },
         "Senza Titolo.tmx": {
             "scale": 1,
